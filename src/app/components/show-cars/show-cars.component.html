@@ -1,0 +1,46 @@
+<form action="" (ngSubmit) = "onSubmit()" >
+    <h2>Please, introduce the next data to look for an available car</h2>
+    <div>
+        <label for="">Start time: </label>
+        <input type="datetime" name= "start_time" id= "" [(ngModel)]="start_time" placeholder="AAAA-MM-DD_HH:mm:s...">
+    </div>
+    <div>
+        <label for="">End time: </label>
+        <input type="datetime" name= "end_time" id= "" [(ngModel)]="end_time" placeholder="AAAA-MM-DD_HH:mm:s...">
+    </div>
+    <div>
+        <label for="">Type of Car: </label>
+        <select name="type" id= "" [(ngModel)]="type">
+            <option value="">all</option>
+            <option value="electric">electric</option>
+            <option value="van">van</option>
+            <option value="pick-up">pick-up</option>
+        </select>
+    </div>
+    <div>
+        <label for="">Order by: </label>
+        <select name="order" id= "" [(ngModel)]="order">
+            <option values="">Any</option>
+            <option value="type"> Type</option>
+            <option value="price">Price</option>
+        </select>
+    </div>
+    <div> 
+        <label for="">Ascending order: </label>
+        <input type="checkbox" [checked] = 'asc' (change)= "onToggle()">
+    </div>
+    <div>
+        <input type="submit" value="Find cars!!!">
+    </div>
+</form>
+
+<div *ngFor='let c of car'>
+    <div>
+        <div class="model">{{c.model}}</div>
+        <div class="price">{{c.pricePerHpur}}</div>
+        <div class="type">{{c.type}}</div>
+        <div>
+            <button (click)="rentCar(c.car_id)">Rent</button>
+        </div>
+    </div>
+</div>
