@@ -22,9 +22,9 @@ export class DataForReservationComponent implements OnInit {
     this.rentsService.rentData.clientName = this.user_name;
     this.rentsService.rentData.clientLastname = this.user_lastname;
     this.rentsService.insertReservation(this.rentsService.rentData).subscribe(
-      (r)=> {this.rentsService.newRent= r;},
-      (i)=> {this.router.navigate(['/reservation']);}
+      (r)=> {this.rentsService.newRent= r;}
       );
+    this.router.navigate(['/reservation']);
   }
 
 }
