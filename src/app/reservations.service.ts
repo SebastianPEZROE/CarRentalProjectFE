@@ -3,12 +3,15 @@ import {HttpClient} from '@angular/common/http'
 import { Observable } from 'rxjs';
 import { Car } from './models/car';
 import { Rent } from './models/reservations';
+import { ReservationData } from './models/reservationData';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ReservationsService {
   private url:string = 'http://localhost:8081/CarRentalSystem/';
+  public newRent:Rent = new Rent();
+  public rentData:ReservationData= new ReservationData();
 
   constructor(private http: HttpClient) { }
 
@@ -16,8 +19,8 @@ export class ReservationsService {
     return this.http.get<Car[]>(this.url + 'available?start=' + start + '&end=' + end + '&type=' + type + '&order=' + order + '&asc=' + asc);
   }
 
-  public insertReservation(rent: Rent): Observable<Rent>{
-    return this.http.post<Rent>(this.url + 'ScheduleRent', rent);
+  public insertReservation(dataToRent: ReservationData): Observable<Rent>{
+    return this.http.post<Rent>(this.url + 'ScheduleRent', dataToRent);
   }
 
   public getReservationById(id: number): Observable<Rent>{

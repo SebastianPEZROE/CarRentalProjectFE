@@ -1,14 +1,18 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { DataForReservationComponent } from './components/data-for-reservation/data-for-reservation.component';
+import { GetRentComponent } from './components/get-rent/get-rent.component';
+import { ReturnCarComponent } from './components/return-car/return-car.component';
 import { ShowCarsComponent } from './components/show-cars/show-cars.component';
+import { ShowReservationComponent } from './components/show-reservation/show-reservation.component';
 
 const routes: Routes = [
   {
     path:'',
     component: ShowCarsComponent
-  }/*,
+  },
   {
-    path:'reservation',
+    path:'check_reservation',
     component: GetRentComponent
   },
   {
@@ -17,12 +21,12 @@ const routes: Routes = [
   },
   {
     path: 'get_user_data',
-    component: DataForReservation
+    component: DataForReservationComponent
   },
   {
-    path:'reservation_id',
-    component: ShowReservationId
-  }*/
+    path:'reservation',
+    component: ShowReservationComponent
+  }
 ];
 
 @NgModule({

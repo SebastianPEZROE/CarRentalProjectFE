@@ -1,6 +1,6 @@
 export interface Car{
     car_id: number;
     model: string;
-    pricePerHpur: number;
+    pricePerHour: number;
     type: string;
 }

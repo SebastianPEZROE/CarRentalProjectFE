@@ -1,0 +1,20 @@
+<form action="" (ngSubmit) = "onSubmit()" >
+    <p>Your reservation will be done with the next data: </p>
+    <div>Car:  ...</div>
+    <div>Start datetime: {{rentsService.rentData.startTime}}</div>
+    <div>End datetime: {{rentsService.rentData.endTime}}</div>
+
+    <h2>Please, introduce the next data to complete your reservation</h2>
+    <div>
+        <label for="">Introduce your Name: </label>
+        <input type="text" name= "user_name" id= "" [(ngModel)]="user_name" >
+    </div>
+    <div>
+        <label for="">Introduce your Last Names: </label>
+        <input type="text" name= "User_lastname" id= "" [(ngModel)]="user_lastname">
+    </div>
+
+    <div>
+        <input type="submit" value="Done">
+    </div>
+</form>

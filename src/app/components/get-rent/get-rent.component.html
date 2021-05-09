@@ -1,0 +1,20 @@
+<form action="" (ngSubmit) = "onSubmit()" >
+    <h2>Please, introduce the reservation number:</h2>
+    <div>
+        <label for="">Rent id: </label>
+        <input type="number" name= "rent_id" id= "" [(ngModel)]="rent_id" >
+    </div>
+    <div>
+        <input type="submit" value="Check rent">
+    </div>
+</form>
+
+<div>
+    <div>Reservation number: {{rent.numberOfRent}}</div>
+    <div>Name: {{rent.clientName}} {{rent.clientLastname}}</div>
+    <div>From:{{rent.startTime}}</div>
+    <div>To: {{rent.endTime}}</div>
+    <div>Car number: {{rent.carId}}</div>
+    <div>Status: {{rent.reserved}} {{status}}</div>
+</div>
+
