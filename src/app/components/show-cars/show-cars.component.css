@@ -1,6 +1,4 @@
-/*.box{
-    background: lavender;
-}*/
+
 .row_static{
     display:flex;
     box-sizing: border-box;
@@ -63,5 +61,5 @@ form div{
     padding: 5px 0;
 }
 form label{
-    padding-left: 50px;
+    padding-left: 30px;
 }

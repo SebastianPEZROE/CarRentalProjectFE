@@ -22,7 +22,6 @@ export class GetRentComponent implements OnInit {
     this.rentsService.getReservationById(this.rent_id).subscribe(
       (r)=>{this.rent = r;}
     );
-    this.status = this.rent.reserved ? 'Reserved': 'Canceled';
   }
 
 }

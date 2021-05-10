@@ -10,9 +10,9 @@ form{
     background-color: lavender;
     text-align: center;    
     margin: 0 auto;
-        border: 1px #cccccc solid;
-        border-radius: 15px;
-        padding: 5px;
+    border: 1px #cccccc solid;
+    border-radius: 15px;
+    padding: 5px;
 }
 form div{
     padding: 5px 0;

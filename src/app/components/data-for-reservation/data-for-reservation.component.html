@@ -1,6 +1,6 @@
 <form action="" (ngSubmit) = "onSubmit()" >
     <p>Your reservation will be done with the next data: </p>
-    <div>Car:  ...</div>
+    <div>Car:  {{rentsService.car_model}}</div>
     <div>Start datetime: {{rentsService.rentData.startTime}}</div>
     <div>End datetime: {{rentsService.rentData.endTime}}</div>
 
@@ -10,7 +10,7 @@
         <input type="text" name= "user_name" id= "" [(ngModel)]="user_name" >
     </div>
     <div>
-        <label for="">Introduce your Last Names: </label>
+        <label for="">Introduce your Last Name: </label>
         <input type="text" name= "User_lastname" id= "" [(ngModel)]="user_lastname">
     </div>
 

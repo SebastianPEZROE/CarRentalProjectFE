@@ -15,6 +15,6 @@
     <div>From:{{rent.startTime}}</div>
     <div>To: {{rent.endTime}}</div>
     <div>Car number: {{rent.carId}}</div>
-    <div>Status: {{rent.reserved}} {{status}}</div>
+    <div class="reserved">Status: <p *ngIf="rent.reserved">Reserved</p><p *ngIf="!rent.reserved">Canceled</p></div>
 </div>
 

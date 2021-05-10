@@ -12,6 +12,7 @@ export class ReservationsService {
   private url:string = 'http://localhost:8081/CarRentalSystem/';
   public newRent:Rent = new Rent();
   public rentData:ReservationData= new ReservationData();
+  public car_model:string ='';
 
   constructor(private http: HttpClient) { }
 

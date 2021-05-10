@@ -1,54 +1,63 @@
-<div class="box"> 
-    <form action="" (ngSubmit) = "onSubmit()" >
-        <h3>Please, introduce the next data to look for an available car.</h3>
-        <div> 
-            <label for="">Start time: </label>
-            <input type="datetime" name= "start_time" id= "" [(ngModel)]="start_time" placeholder="AAAA-MM-DD_HH:mm:s...">
-        <!--</div>
-        <div>-->
-            <label for="">End time: </label>
-            <input type="datetime" name= "end_time" id= "" [(ngModel)]="end_time" placeholder="AAAA-MM-DD_HH:mm:s...">
-        </div>
-        <div>
-            <label for="">Type of Car: </label>
-            <select name="type" id= "" [(ngModel)]="type">
-                <option value="">all</option>
-                <option value="electric">electric</option>
-                <option value="van">van</option>
-                <option value="pick-up">pick-up</option>
-            </select>
-        <!--</div>
-        <div>-->
-            <label for="">Order by: </label>
-            <select name="order" id= "" [(ngModel)]="order">
-                <option values="">Any</option>
-                <option value="type"> Type</option>
-                <option value="price">Price</option>
-            </select>
-        <!--</div>
-        <div>--> 
-            <label for="">Ascending order: </label>
-            <input type="checkbox" [checked] = 'asc' (change)= "onToggle()">
-        <!--</div>
-        <div>-->
-            <input class="submit_b" type="submit" value="Find cars!!!">
-        </div>
-    </form>
-</div>
+
+<form action="" (ngSubmit) = "onSubmit()" >
+    <h3>Please, introduce the next data to look for an available car.</h3>
+    <div> 
+        <label for="">Start date: </label>
+        <!--<input type="datetime" name= "start_time" id= "" [(ngModel)]="start_time" placeholder="AAAA-MM-DD_HH:mm:s...">{{start_time}}-->
+        <input type="date" name= "start_date" id= "" [(ngModel)]="start_date" >
+        <label> Start time: </label>
+        <input type="time" name= "start_time" id= "" [(ngModel)]="start_time" >
+
+        <label for="">End date: </label>
+        <!--<input type="datetime" name= "end_time" id= "" [(ngModel)]="end_time" placeholder="AAAA-MM-DD_HH:mm:s...">-->
+        <input type="date" name= "end_date" id= "" [(ngModel)]="end_date" >
+        <label> End time: </label>
+        <input type="time" name= "end_time" id= "" [(ngModel)]="end_time" >
+    </div>
+    <div>
+        <label for="">Type of Car: </label>
+        <select name="type" id= "" [(ngModel)]="type">
+            <option value="">all</option>
+            <option value="electric">electric</option>
+            <option value="van">van</option>
+            <option value="pick-up">pick-up</option>
+        </select>
+
+        <label for="">Order by: </label>
+        <select name="order" id= "" [(ngModel)]="order">
+            <option values="">Any</option>
+            <option value="type"> Type</option>
+            <option value="price">Price</option>
+        </select>
+
+        <label for="">Ascending order: </label>
+        <input type="checkbox" [checked] = 'asc' (change)= "onToggle()">
+
+        <input class="submit_b" type="submit" value="Find cars!!!">
+    </div>
+</form>
+
 
 <div class="row_static">
     <div class="model"><h4>Brand and model</h4></div>
     <div class="price"><h4>Price per hour</h4></div>
+    <div class="price"><h4>Total Price</h4></div>
     <div class="type"><h4>Class of car</h4></div>
 </div>
 
+
+<div *ngIf='car.length == 0'>Sorry, there is not available cars, please try with others datetimes.</div>
+
 <div *ngFor='let c of car'>
+    
     <div class="row">
+        
         <div class="model">{{c.model}}</div>
         <div class="price">{{c.pricePerHour |currency}}</div>
+        <div class="price">{{c.totalPrice |currency}}</div>
         <div class="type">{{c.type}}</div>
         <div class="rent_b">
-            <button  (click)="rentCar(c.car_id)" routerLink='/get_user_data'>Rent</button>
+            <button  (click)="rentCar(c.car_id, c.model)" routerLink='/get_user_data'>Rent</button>
         </div>
     </div>
 </div>

@@ -3,4 +3,5 @@ export interface Car{
     model: string;
     pricePerHour: number;
     type: string;
+    totalPrice: number;
 }
