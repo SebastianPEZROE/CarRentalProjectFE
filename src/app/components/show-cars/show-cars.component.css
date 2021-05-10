@@ -1,0 +1,67 @@
+/*.box{
+    background: lavender;
+}*/
+.row_static{
+    display:flex;
+    box-sizing: border-box;
+}
+.row{
+    display:flex;
+    box-sizing: border-box;
+}
+.row:hover{
+    border-radius: 3px;
+    background: lightsteelblue;
+}
+
+div{
+    padding: 5px 0;
+}
+
+.model{
+    display:flex;
+    width: 30%;
+    padding : 0 5px;
+}
+.price{
+    width:15%;
+    padding: 0 5px;
+}
+.type{
+    width: 10%;
+    padding: 0 5px;
+}
+.rent_b{
+    width: 10%;
+    text-align: center;
+    box-sizing: border-box;
+    padding: 0 5px;
+}
+.rent_b button{
+    background-color: lightgreen;
+}
+.rent_b button:hover{
+    background-color: lightskyblue;
+}
+.submit_b{
+    padding :5px;
+    background-color: lightgreen;
+}
+
+h3{
+    margin: 10px;
+}
+
+form{
+    background-color: lavender;
+    text-align: center;    
+    margin: 0 auto;
+        border: 1px #cccccc solid;
+
+}
+form div{
+    padding: 5px 0;
+}
+form label{
+    padding-left: 50px;
+}

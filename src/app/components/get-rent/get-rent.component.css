@@ -1,0 +1,25 @@
+.information{
+    margin: 0 auto;
+    width: 450px;
+    display: block;
+    border: 1px #cccccc solid;
+    border-radius: 15px;
+    padding: 25px;
+}
+form{
+    background-color: lavender;
+    text-align: center;    
+    margin: 0 auto;
+        border: 1px #cccccc solid;
+        border-radius: 15px;
+        padding: 5px;
+}
+form div{
+    padding: 5px 0;
+}
+.space{
+    padding: 20px;
+}
+div{
+    padding: 8px;
+}
